@@ -14,10 +14,8 @@ export default function Home({ posts }) {
 				<meta name="description" content="Powered by garyavendanio: from avro" />
 				<link rel="icon" type="image/png" href="/favicon.png" />
 			</Head>
-			<div className='container mx-auto text-gray-700'>
-				Tendencias en Diseño Web.
-			</div>
-			<div className='bg-gray-100'>
+
+			<div className='text-gray-700'>
 				{posts.map( (post, index) => (<Post key={index} post={post} />) )}
 			</div>
 		</div>
