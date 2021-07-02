@@ -3,10 +3,17 @@ import path from 'path'
 import matter from 'gray-matter'
 import marked from 'marked'
 import Link from 'next/link'
+import Head from 'next/head'
 
 export default function PostPage( {frontmatter: {title, date, cover_image}, slug, content} ) {
     return (
         <span>
+            <Head>
+                <title>avro.dev | {title}</title>
+                <meta name="description" content="Powered by garyavendanio: from avro" />
+                <link rel="icon" type="image/png" href="/favicon.png" />
+            </Head>
+       
             <Link href='/'>Regresar</Link>
             <h1>{title}</h1>
             <small>Fecha de publicación: {date}</small>
