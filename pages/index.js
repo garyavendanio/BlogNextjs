@@ -7,11 +7,11 @@ import { sortByDate } from '../utils'
 export default function Home({ posts }) {
 	//console.log(posts)
 	return (
-		<section>
+		<div>
 			<div className='text-gray-700'>
 				{posts.map((post, index) => (<Post key={index} post={post} />))}
 			</div>
-		</section>
+		</div>
 	)
 }
 
