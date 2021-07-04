@@ -6,14 +6,14 @@ import Link from 'next/link'
 
 export default function PostPage( {frontmatter: {title, date, cover_image}, slug, content} ) {
     return (
-        <span>
+        <div className='container mx-auto my-5'>
             <Link href='/'>Regresar</Link>
             <h1>{title}</h1>
             <p>Nombre del post es: {slug}</p>
             <small>Fecha de publicación: {date}</small>
             <img src={cover_image} width='70' alt='' />
             <div dangerouslySetInnerHTML={{__html: marked(content)}}></div>
-        </span>
+        </div>
     )
 }
 
