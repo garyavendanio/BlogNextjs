@@ -1,18 +1,17 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import Head from 'next/head'
 import Post from '../components/Post'
 import { sortByDate } from '../utils'
 
 export default function Home({ posts }) {
 	//console.log(posts)
 	return (
-		<div>
+		<section>
 			<div className='text-gray-700'>
-				{posts.map( (post, index) => (<Post key={index} post={post} />) )}
+				{posts.map((post, index) => (<Post key={index} post={post} />))}
 			</div>
-		</div>
+		</section>
 	)
 }
 

@@ -3,16 +3,16 @@ import path from 'path'
 import matter from 'gray-matter'
 import marked from 'marked'
 import Link from 'next/link'
-import Head from 'next/head'
 
 export default function PostPage( {frontmatter: {title, date, cover_image}, slug, content} ) {
     return (
         <span>
             <Link href='/'>Regresar</Link>
             <h1>{title}</h1>
+            <p>Nombre del post es: {slug}</p>
             <small>Fecha de publicación: {date}</small>
             <img src={cover_image} width='70' alt='' />
-            <div dangerouslySetInnerHTML={ {__html: marked(content) } }></div>
+            <div dangerouslySetInnerHTML={{__html: marked(content)}}></div>
         </span>
     )
 }

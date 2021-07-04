@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-				<title>avro.dev</title>
+				<title>Avrodev</title>
 				<meta name="description" content="Powered by garyavendanio: from avro" />
 				<link rel="icon" type="image/png" href="images/favicon.png" />
 			</Head>
