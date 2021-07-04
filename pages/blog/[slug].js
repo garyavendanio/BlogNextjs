@@ -8,9 +8,9 @@ export default function PostPage( {frontmatter: {title, date, cover_image}, slug
     return (
         <div className='container mx-auto my-5'>
             <Link href='/'>Regresar</Link>
-            <h1>{title}</h1>
+            <h1 className='font-semibold'>{title}</h1>
+            <small className='text-gray-500'>Fecha de publicación: {date}</small>
             <p>Nombre del post es: {slug}</p>
-            <small>Fecha de publicación: {date}</small>
             <img src={cover_image} width='70' alt='' />
             <div dangerouslySetInnerHTML={{__html: marked(content)}}></div>
         </div>

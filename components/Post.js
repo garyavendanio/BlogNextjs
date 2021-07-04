@@ -9,12 +9,14 @@ export default function Post({post}) {
                 </div>
                 <div className='h-auto flex flex-wrap content-center'>
                     <div className='p-5'>
-                        <p className='font-semibold'>{post.frontmatter.title}</p>
+                        <h1 className='font-semibold'>{post.frontmatter.title}</h1>
+                        <div className='text-sm text-gray-500'>Fecha de publicación: {post.frontmatter.date}</div>
                         <p>{post.frontmatter.excerpt}</p>
-                        <div className='bg-gray-200 w-1/4 text-center p-2 rounded-lg'>
-                            <Link href={`/blog/${post.slug}`}>Leer más</Link>
-                        </div>
-                        <div className='text-sm'>Fecha de publicación: {post.frontmatter.date}</div>
+                        <Link href={`/blog/${post.slug}`}>
+                            <button className='bg-gray-800 text-white rounded-lg px-6 py-2'>
+                                Leer más
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
