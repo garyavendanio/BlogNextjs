@@ -1,12 +1,18 @@
+import Head from 'next/head'
 import Header from '../components/Header'
-import '../styles/globals.css'
+import '../public/css/index.css'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <section>
+    <>
+      <Head>
+				<title>avro.dev</title>
+				<meta name="description" content="Powered by garyavendanio: from avro" />
+				<link rel="icon" type="image/png" href="images/favicon.png" />
+			</Head>
       <Header />
       <Component {...pageProps} />
-    </section>
+    </>
   )
 }
 

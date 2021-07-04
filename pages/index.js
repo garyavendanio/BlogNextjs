@@ -9,12 +9,6 @@ export default function Home({ posts }) {
 	//console.log(posts)
 	return (
 		<div>
-			<Head>
-				<title>avro.dev</title>
-				<meta name="description" content="Powered by garyavendanio: from avro" />
-				<link rel="icon" type="image/png" href="/favicon.png" />
-			</Head>
-
 			<div className='text-gray-700'>
 				{posts.map( (post, index) => (<Post key={index} post={post} />) )}
 			</div>

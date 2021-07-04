@@ -3,12 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev:localhost": "next dev",
+    "dev:l": "next dev",
     "dev": "node server.js",
-    "start:css": "postcss ./public/tailwind.css -o ./styles/globals.css",
-    "build:css": "NODE_ENV=production postcss ./public/tailwind.css -o ./styles/globals.css",
     "build": "next build && next export",
-    "start:localhost": "next start",
+    "start:l": "next start",
     "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
